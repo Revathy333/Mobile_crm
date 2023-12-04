@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        text-align: center;
+        background-color: palegreen;
+        margin: auto;
+    }
+    th{
+        width: 50px;
+        height: 80px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    tr{
+        width: 50px;
+        height: 60px;
+    }
+    td{
+        width: 50px;
+    }
+</style>
+<body>
+    <h2 style="text-align: center;">Movie Details</h2>
+    <table border="1px">
+   <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Category</th>
+    <th>Review</th>
+   </tr>
+   {%for movie in qs%}
+   <tr>
+  <td>{{movie.name}}</td>
+   <td>{{movie.year}}</td>
+   <td>{{movie.category}}</td>
+   <td>{{movie.review}}</td>
+</tr>
+   {%endfor%} 
+   </table>
+</body>
+</html>

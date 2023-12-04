@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
+<body>
+    <!-- On tables -->
+    <h3 class=" text-center font-monospace">
+        ALL STUDENT LIST  
+        <small class="text-body-secondary">From database</small>
+      </h3>
+    <!-- On tables -->
+<table class="table table-bordered border-primary">
+    <tr><th class="table-secondary">Name</th>
+    <th class="table-success">Age</th>
+    <th class="table-warning">Course</th>
+    <th class="table-info">Gender</th>
+    <th class="table-light">Place</th>
+  </tr>
+
+
+<tr>{%for student in new%}
+    </tr>
+    <tr>
+  <td class="table-primary">{{student.name}}</td>
+  <td class="table-secondary">{{student.age}}</td>
+  <td class="table-success">{{student.course}}</td>
+  <td class="table-danger">{{student.gender}}</td>
+  <td class="table-warning">{{student.place}}</td>
+  
+</tr>
+{%endfor%}
+</table>
+
+</body>
+</html>
